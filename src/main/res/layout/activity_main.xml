@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:padding="16dp"
+tools:context=".MainActivity">
+
+<EditText
+    android:id="@+id/numberEditText"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:inputType="number"
+    android:hint="Enter a number (multiple of 3)"
+    android:layout_marginBottom="16dp" />
+
+<Button
+    android:id="@+id/submitButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/numberEditText"
+    android:text="Submit"
+    android:backgroundTint="@color/red"
+    android:layout_marginBottom="16dp" />
+
+<RadioGroup
+    android:id="@+id/colorRadioGroup"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/submitButton"
+    android:orientation="horizontal">
+
+    <RadioButton
+        android:id="@+id/redRadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Red" />
+
+    <RadioButton
+        android:id="@+id/greenRadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Green" />
+
+    <RadioButton
+        android:id="@+id/blueRadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Blue" />
+
+</RadioGroup>
+
+<GridView
+    android:id="@+id/gridView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@id/colorRadioGroup"
+    android:numColumns="3"
+    android:horizontalSpacing="8dp"
+    android:verticalSpacing="8dp" />
+
+</RelativeLayout>
